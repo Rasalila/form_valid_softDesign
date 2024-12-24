@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(15, 3, 67);
+}
+
+.section-container {
+  position: relative;
+  max-width: 500px;
+  padding: 60px 50px;
+  margin: 50px auto 50px;
+  background-size: cover;
+  box-shadow: 0px 31px 35px -26px #080c21;
+}
+
+.section-container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to right bottom,
+    rgba(7, 10, 97, 0.5),
+    rgba(71, 60, 213, 0.5)
+  );
+}
+
+.form {
+  position: relative;
+}
+
+.form h1 {
+  position: relative;
+  margin-top: 0;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 26px;
+  text-transform: uppercase;
+}
+
+.form h1:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 2px;
+  width: 60px;
+  background: #4f2879;
+}
+
+.form label,
+a,
+p {
+  display: block;
+  padding-left: 15px;
+  font-family: "Roboto", sans-serif;
+  color: rgba(255, 255, 255, 0.767);
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.form input,
+button,
+[type="radio"] {
+  display: block;
+  width: 100%;
+  padding: 0 15px;
+  margin: 10px 0 15px;
+  border-width: 0;
+  line-height: 40px;
+  border-radius: 20px;
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  font-family: "Roboto", sans-serif;
+}
+
+select {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 0 15px;
+  margin: 10px 0 15px;
+  border-width: 0;
+  line-height: 40px;
+  border-radius: 20px;
+  color: white;
+  background: rgba(255, 255, 255, 0.114);
+  font-family: "Roboto", sans-serif;
+}
+
+select option {
+  background-color: rgba(15, 3, 67, 0.873);
+}
+
+.form input[type="checkbox"],
+[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+#policy + label {
+  position: relative;
+  margin: 20px 0;
+  text-transform: none;
+  cursor: pointer;
+}
+
+#policy + label:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: text-top;
+  background: white;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+#policy:checked + label:before {
+  background: rgb(121, 40, 40);
+}
+
+#policy:checked + label:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  left: 20px;
+  top: 9px;
+  background: white;
+  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white,
+    4px -6px 0 white, 4px -8px 0 white;
+  transform: rotate(45deg);
+}
+
+.privacy-policy {
+  text-transform: none;
+  cursor: pointer;
+}
+
+button {
+  background: rgb(121, 40, 40);
+  cursor: pointer;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.form input[type="radio"] {
+  opacity: 0.33; /* Делаем радиокнопки видимыми */
+}
+
+.errorsInfo {
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+}
+.errorsInfo span {
+  color: black;
+}
+
+input:required:valid {
+  border-color: yellowgreen;
+}
+
+span {
+  font-size: 30px;
+  color: rgb(121, 40, 40);
+}
+
+label {
+  margin-bottom: 15px;
+}

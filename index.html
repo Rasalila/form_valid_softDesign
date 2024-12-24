@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Форма регистрации с валидацией</title>
+  </head>
+  <body>
+    <main class="main">
+      <section class="section-container">
+        <form action="index.html" method="post" class="form">
+          <h1 class="title">Регистрация</h1>
+
+          <div class="div-name">
+            <label for="name">Имя: <span>*</span></label>
+            <input
+              type="text"
+              placeholder="Введите ваше имя"
+              id="name"
+              name="name"
+              required
+            />
+          </div>
+          <!--  -->
+
+          <label for="email">Email: <span>*</span></label>
+          <input
+            type="mail"
+            placeholder="Введите ваш email"
+            id="email"
+            name="email"
+            required
+          />
+          <!--  -->
+
+          <label for="age">Возраст: <span>*</span></label>
+          <!--  -->
+          <input
+            type="number"
+            placeholder="Введите ваш возраст"
+            id="age"
+            name="age"
+            min="14"
+            max="110"
+            required
+          />
+          <!--  -->
+
+          <label for="#">Пол:</label>
+          <input type="radio" id="male" name="gender" />
+          <label for="male">Мужчина</label>
+          <input type="radio" id="female" name="gender" />
+          <label for="female">Женщина</label>
+          <!--  -->
+
+          <label for="profession">Профессия: <span>*</span></label>
+          <select
+            placeholder="Ваша профессия"
+            id="profession"
+            name="profession"
+            required
+          >
+            <option value="" disabled selected>Выберите профессию</option>
+            <option value="doctor">Врач</option>
+            <option value="programmer">Программист</option>
+            <option value="teacher">Учитель</option>
+            <option value="designer">Дизайнер</option>
+            <option value="engineer">Инженер</option>
+            <option value="salesperson">Продавец</option>
+            <option value="other">Другое</option>
+          </select>
+          <!--  -->
+
+          <label for="password">Пароль: <span>*</span></label>
+          <input
+            type="password"
+            placeholder="Введите пароль"
+            required
+            minlength="8"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).*"
+            id="password"
+            name="password"
+          />
+          <!--  -->
+
+          <input type="checkbox" id="policy" name="policy" required />
+          <label for="policy">Я согласен с обработкой персональных данных</label
+          >
+          <a href="#" class="privacy-policy">Политика конфиденциальности</a>
+          <!--  -->
+
+          <button type="button" id="button" onclick="checkAll()">
+            Отправить
+          </button>
+          <p><span>*</span> — Обязательные поля</p>
+          <div class="errorsInfo"></div>
+        </form>
+      </section>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
